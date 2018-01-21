@@ -1,20 +1,53 @@
 # carly-test-project
 
 > A Vue.js project
+For this project you will bootstrap a new project skeleton and add some logic to make a simple custom webapp. You will configure deployment and publish the app on Github Pages.
 
-## Build Setup
+Since ths project is being created from scratch, you will need to make a repository on Github and commit all the files yourself. 
+# Build Setup
 
-``` bash
-# install dependencies
+## Install Vue-CLI by running the command `npm install -g vue-cli`
+
+## Bootstrap the Application
+Once Vue-CLI is properly installed, we can bootstrap our project skeleton. This will create all the needed files to start writing our application. Create a new app using the webpack by using the command `vue init webpack test-project`
+- There will be a few questions to answer.
+- Once the project skeleton is available, `cd` into the directory where your project was created.
+
+## Install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+## Once the installation is complete, we can test the project by running:
 npm run dev
 
-# build for production with minification
-npm run build
+## Get familiar with the different Vue.Js components by:
+- Modifying the "Hello" components in `src/components/Hello.vue`
+- Changing the styles in the `src/App.vue` template
+- Modify the logic by changing the wording of the `msg:` variable
+- Add an event handler by creating a button that calculates two sums when it is clicked
 
-# build for production and view the bundle analyzer report
+# Practice debugging
+- Make sure that you have the Vue-Devtools installed on your browser
+- Open the Vue-Devtools panel, to watch the value change when the Calculate button is clicked
+- To learn what happens during a sytax error you should create one. Do this by adding a semicolon to the data oject (after the word 'null)
+-- You should see warning messages popped up in several different places
+
+#Deploying the App
+
+## Create a repository in Github
+- It can be either public or private
+- No need to make a `README`file
+- Add all the files you have been working on by using the command `git add -A`
+
+## Configure the Webpack
+- In the `config/index.js` file change "dist" to "docs"
+- While in the `config/index.js` file set the  `assetsPublicPath` to `''`
+- build for production with minification by using the command `npm run build`
+
+## Configure Github Pages
+- In the setting tab change the "Source" to master branch/docs folder. Then click save. 
+- Copy the link and pasted it paste it in the main heading of your repository. 
+
+## build for production and view the bundle analyzer report
 npm run build --report
 ```
 
